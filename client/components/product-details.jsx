@@ -9,7 +9,9 @@ class ProductDetails extends React.Component {
   }
 
   render() {
-    return null;
+    if (this.setState({ product: null })) {
+      return this.state;
+    }
   }
 
   componentDidMount() {
