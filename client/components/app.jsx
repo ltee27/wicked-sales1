@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './header';
+import ProductList from "./product-list";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -7,6 +8,7 @@ export default class App extends React.Component {
     this.state = {
       products: []
     };
+    this.setState = this.setState.bind(this);
   }
 
   componentDidMount() {
@@ -25,6 +27,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Header/>
+        <ProductList data={this.state.products} />
       </div>
     );
   }
