@@ -6,7 +6,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: []
+      products: [],
+      view: {
+        name: 'catalog',
+        params: {}
+      }
     };
     this.setState = this.setState.bind(this);
   }
