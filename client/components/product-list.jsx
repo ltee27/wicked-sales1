@@ -9,7 +9,7 @@ class ProductList extends React.Component {
           {this.props.data.map(item => {
             return (
               <div className="col-md-4" key={item.id}>
-                <ProductListItem data={this.setView} product={item}/>
+                <ProductListItem onClick={this.setView} product={item}/>
               </div>
             );
           })}
