@@ -26,9 +26,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     $output[] = $row;
 }
 
-
-
-//eader('Content-Type: application/json');
+$json_output = json_encode($output);
+print($json_output);
 
 //if (empty($_GET['id'])) {
 //  readfile('dummy-products-list.json');
