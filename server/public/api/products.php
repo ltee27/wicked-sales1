@@ -5,14 +5,16 @@ require_once('functions.php');
 
 set_exception_handler('error_handler');
 
-doStuff();
-
 $output = file_get_contents('dummy-products-list.json');
 print($output);
 
 if(!$conn) {
     print(mysqli_connect_error());
 }
+
+$query = "SELECT * FROM products";
+
+//$result =
 
 //header('Content-Type: application/json');
 

@@ -25,10 +25,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Header/>
         <ProductList data={this.state.products} />
-      </div>
+      </React.Fragment>
     );
   }
 }
