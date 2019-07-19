@@ -20,11 +20,13 @@ if(!$result) {
     throw new Exception('error with query:' . mysqli_error($conn));
 }
 
-$data = [];
+$output = [];
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $data[] = $row;
+    $output[] = $row;
 }
+
+
 
 //eader('Content-Type: application/json');
 
