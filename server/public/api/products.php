@@ -14,9 +14,19 @@ if(!$conn) {
 
 $query = "SELECT * FROM products";
 
-//$result =
+$result = mysqli_query($conn, $query);
 
-//header('Content-Type: application/json');
+if(!$result) {
+    throw new Exception('error with query:' . mysqli_error($conn));
+}
+
+$data = [];
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $data[] = $row;
+}
+
+//eader('Content-Type: application/json');
 
 //if (empty($_GET['id'])) {
 //  readfile('dummy-products-list.json');
@@ -24,4 +34,3 @@ $query = "SELECT * FROM products";
 //  readfile('dummy-product-details.json');
 //}
 //
-?>
